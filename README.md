@@ -4,55 +4,68 @@ Application mobile Flutter réalisée dans le cadre d’un projet de fin d’ét
 
 > Ce projet est un prototype académique et ne remplace pas un système d’alarme certifié ni les services de secours.
 
-## Captures d’écran
+## Fonctionnalités par module
 
-### Tableau de bord et alertes
+### 1. Tableau de bord et suivi des capteurs
 
-![Tableau de bord des capteurs et liste des alertes](screenshots/dashboard-and-alerts.png)
+L’accueil donne une vue rapide sur les mesures et l’état des capteurs. Les graphiques permettent de consulter les relevés de température, d’humidité et de gaz, de choisir le nombre de points affichés et d’activer ou désactiver le mode temps réel.
 
-![Tri et suivi des alertes](screenshots/alert-sorting.png)
+<table>
+  <tr>
+    <td align="center" width="50%"><strong>Vue d’ensemble</strong><br><img src="screenshots/dashboard-and-alerts.png" alt="Tableau de bord des capteurs et aperçu des alertes" width="360"></td>
+    <td align="center" width="50%"><strong>Mesures et graphiques</strong><br><img src="screenshots/sensor-charts-live.png" alt="Graphiques capteurs avec sélection de période et mode temps réel" width="360"></td>
+  </tr>
+</table>
 
-### Mesures et graphiques
+### 2. Alertes et analyse des risques
 
-![Graphiques de température, d’humidité et de gaz avec sélection de période et mode temps réel](screenshots/sensor-charts-live.png)
+Les alertes peuvent être consultées et triées depuis l’application, avec des indicateurs de notifications non lues. L’écran d’analyse présente le niveau et le score de risque associés aux capteurs.
 
-### Analyse des risques d’incendie
+<table>
+  <tr>
+    <td align="center" width="50%"><strong>Gestion des alertes</strong><br><img src="screenshots/alert-sorting.png" alt="Options de tri et liste des alertes" width="360"></td>
+    <td align="center" width="50%"><strong>Évaluation du risque</strong><br><img src="screenshots/fire-risk-analysis.png" alt="Niveaux et scores d’analyse des risques par capteur" width="360"></td>
+  </tr>
+</table>
 
-![Niveaux et scores d’analyse des risques par capteur](screenshots/fire-risk-analysis.png)
+### 3. Pilotage des équipements
 
-### Contrôle des équipements
+Des écrans dédiés affichent l’état de l’extincteur et du ventilateur. Des commandes rapides regroupent les actions principales. Les états des appareils sont synchronisés avec les données Supabase du projet.
 
-![État, activation et historique de l’extincteur](screenshots/extinguisher-controls.png)
+<table>
+  <tr>
+    <td align="center" width="50%"><strong>Extincteur</strong><br><img src="screenshots/extinguisher-controls.png" alt="Commande et état de l’extincteur" width="360"></td>
+    <td align="center" width="50%"><strong>Ventilation</strong><br><img src="screenshots/ventilation-controls.png" alt="Commande et état du ventilateur" width="360"></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><strong>Accès rapide aux commandes</strong><br><img src="screenshots/quick-device-controls.png" alt="Commandes rapides des équipements" width="420"></td>
+  </tr>
+</table>
 
-![Commandes rapides des équipements](screenshots/quick-device-controls.png)
+### 4. Assistant de sécurité incendie
 
-![État et commandes du ventilateur](screenshots/ventilation-controls.png)
+Le chatbot propose une interface de questions-réponses avec des suggestions et des fonctions vocales. Les captures montrent l’écran d’accueil de l’assistant et des exemples d’échanges.
 
-### Assistant de sécurité incendie
+<table>
+  <tr>
+    <td align="center" width="50%"><strong>Accueil de l’assistant</strong><br><img src="screenshots/fire-safety-chat-assistant.png" alt="Assistant de sécurité incendie et questions suggérées" width="360"></td>
+    <td align="center" width="50%"><strong>Exemples de conversation</strong><br><img src="screenshots/fire-safety-chat-examples.png" alt="Exemples de questions et réponses du chatbot" width="360"></td>
+  </tr>
+</table>
 
-![Assistant avec aide, questions suggérées et entrée vocale](screenshots/fire-safety-chat-assistant.png)
+### 5. Connexion, compte et personnalisation
 
-![Exemples de conversations avec l’assistant de sécurité](screenshots/fire-safety-chat-examples.png)
+Les paramètres regroupent les préférences d’affichage, la gestion du profil et les options du compte. L’application propose également un écran de connexion.
 
-### Connexion, compte et paramètres
-
-![Écrans de connexion et de paramètres](screenshots/authentication-and-settings.png)
-
-![Réglages d’apparence et profil](screenshots/theme-and-profile-settings.png)
-
-![Gestion du profil et des informations du compte](screenshots/profile-and-account.png)
-
-## Fonctionnalités
-
-- Connexion à l’application et navigation entre l’accueil, le chatbot et les paramètres.
-- Suivi des mesures de température, d’humidité, de concentration de gaz, de flamme et de fumée.
-- Mise à jour des données de capteurs avec Supabase Realtime/Broadcast.
-- Graphiques de température, d’humidité et de gaz avec affichage de 10, 20 ou 30 points et option temps réel.
-- Alertes avec compteurs de notifications critiques et non lues, filtres et options de tri.
-- Consultation des analyses de risque d’incendie avec niveau et score par capteur.
-- Commandes dédiées et rapides pour l’extincteur et le ventilateur, avec affichage de leur état.
-- Assistant de sécurité incendie avec saisie texte et fonctions vocales.
-- Réglages du thème, du compte, des notifications, de la confidentialité et du feedback.
+<table>
+  <tr>
+    <td align="center" width="50%"><strong>Connexion et paramètres</strong><br><img src="screenshots/authentication-and-settings.png" alt="Écrans de connexion et de paramètres" width="360"></td>
+    <td align="center" width="50%"><strong>Thème et profil</strong><br><img src="screenshots/theme-and-profile-settings.png" alt="Réglages d’apparence et profil" width="360"></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><strong>Informations du compte</strong><br><img src="screenshots/profile-and-account.png" alt="Gestion du profil et des informations du compte" width="420"></td>
+  </tr>
+</table>
 
 ## Architecture
 
@@ -93,7 +106,7 @@ Les mesures sont lues dans `capteurs`; les alertes et les analyses de risque pro
 
 Prérequis : Flutter avec un SDK Dart compatible avec `^3.7.0`, ainsi qu’un appareil ou un émulateur configuré.
 
-Configurez l’URL Supabase et une clé anon dans l’initialisation de `Supabase` dans `lib/main.dart`, et définissez les règles d’accès nécessaires sur les tables et les flux Realtime. Ne publiez jamais de clé `service_role` dans une application mobile.
+Configurez l’URL Supabase et une clé anon dans l’initialisation de Supabase dans `lib/main.dart`, et définissez les règles d’accès nécessaires sur les tables et les flux Realtime. Ne publiez jamais de clé `service_role` dans une application mobile.
 
 ```bash
 flutter pub get
