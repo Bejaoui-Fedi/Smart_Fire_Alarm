@@ -57,6 +57,8 @@ Le chatbot propose une interface de questions-réponses avec des suggestions et 
 
 Les paramètres regroupent les préférences d’affichage, la gestion du profil et les options du compte. L’application propose également un écran de connexion.
 
+Les captures d’écran du profil ont été anonymisées pour protéger les informations personnelles.
+
 <table>
   <tr>
     <td align="center" width="50%"><strong>Connexion et paramètres</strong><br><img src="screenshots/authentication-and-settings.png" alt="Écrans de connexion et de paramètres" width="360"></td>
