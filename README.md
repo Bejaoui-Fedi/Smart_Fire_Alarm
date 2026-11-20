@@ -62,10 +62,10 @@ Les captures d’écran du profil ont été anonymisées pour protéger les info
 <table>
   <tr>
     <td align="center" width="50%"><strong>Connexion et paramètres</strong><br><img src="screenshots/authentication-and-settings.png" alt="Écrans de connexion et de paramètres" width="360"></td>
-    <td align="center" width="50%"><strong>Thème et profil</strong><br><img src="screenshots/theme-and-profile-settings.png" alt="Réglages d’apparence et profil" width="360"></td>
+    <td align="center" width="50%"><strong>Thème et profil</strong><br><img src="screenshots/theme-and-profile-settings-anonymized.png" alt="Réglages d’apparence et profil" width="360"></td>
   </tr>
   <tr>
-    <td colspan="2" align="center"><strong>Informations du compte</strong><br><img src="screenshots/profile-and-account.png" alt="Gestion du profil et des informations du compte" width="420"></td>
+    <td colspan="2" align="center"><strong>Informations du compte</strong><br><img src="screenshots/profile-and-account-anonymized.png" alt="Gestion du profil et des informations du compte" width="420"></td>
   </tr>
 </table>
 
